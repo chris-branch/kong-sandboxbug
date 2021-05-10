@@ -1,4 +1,4 @@
-FROM docker-remote.registry.kroger.com/kong:2.3.3-alpine
+FROM kong:2.3.3-alpine
 
 COPY ./test-config.yml /test-config.yml
 
