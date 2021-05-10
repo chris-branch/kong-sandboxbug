@@ -1,0 +1,18 @@
+_format_version: "2.1"
+_transform: true
+
+routes:
+  - name: route-1
+    paths:
+      - /route1
+    plugins:
+      - name: my-custom-plugin
+  - name: route-2
+    paths:
+      - /route2
+    plugins:
+      - name: pre-function
+        config:
+          access:
+            - "kong.log.notice('*** pre-function plugin was called') kong.response.exit(200, 'success')"
+
